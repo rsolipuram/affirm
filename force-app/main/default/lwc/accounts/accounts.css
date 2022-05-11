@@ -1,0 +1,4 @@
+.slds-item:hover{
+    cursor: pointer;
+    background-color: azure;
+}

@@ -1,0 +1,36 @@
+<template>
+    <template if:false={recordViewMode}>
+        <ul class="slds-has-dividers_around-space">
+            <template if:true={selectedAccountId}>
+                Selected Account Id - {selectedAccountId}
+            </template>
+            <template if:false={selectedAccountId}>
+                Select an Account and click next to view more details
+            </template>
+            <template if:true={accounts}>
+                <template for:each={accounts} for:item="account">
+                    <li key={account.Id} class="slds-item">
+                        <c-account key={account.Id} selectedid={selectedAccountId} account={account} onselected={accountSelected}></c-account>
+                    </li>
+                </template>
+            </template>
+        </ul>
+        <br/>
+        <lightning-button variant="brand" label="Next" title="Next" class="slds-m-left_x-small" onclick={viewAccountClick}></lightning-button>
+    </template>
+
+    <template if:true={isLoading}>
+        <lightning-spinner alternative-text="Loading" variant="brand" size="large">
+        </lightning-spinner>
+    </template>
+
+    <template if:true={recordViewMode}>
+        <template if:true={accountRecord}>
+            <c-account-details account={accountRecord}></c-account-details>
+        </template>
+        <br/>
+        <p slot="footer">
+            <lightning-button variant="brand" label="Back" title="Next" class="slds-m-left_x-small" onclick={listAccountsClick}></lightning-button>
+        </p>
+    </template>
+</template>

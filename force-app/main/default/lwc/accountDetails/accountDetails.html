@@ -1,0 +1,38 @@
+<template>
+    <template if:true={account}>
+        <lightning-card variant="Narrow"  title={account.Name}  icon-name="standard:account">
+            <dl class="slds-dl_horizontal">
+                <dt class="slds-dl_horizontal__label">
+                    <p class="slds-truncate" title="Name">Name:</p>
+                </dt>
+                <dd class="slds-dl_horizontal__detail slds-tile__meta">
+                    <p class="slds-truncate" title={account.Name}>{account.Name}</p>
+                </dd>
+                <dt class="slds-dl_horizontal__label">
+                    <p class="slds-truncate" title="Industry">Industry:</p>
+                </dt>
+                <dd class="slds-dl_horizontal__detail slds-tile__meta">
+                    <p class="slds-truncate" title={account.Industry}>{account.Industry}</p>
+                </dd>
+                <dt class="slds-dl_horizontal__label">
+                    <p class="slds-truncate" title="Type">Type:</p>
+                </dt>
+                <dd class="slds-dl_horizontal__detail slds-tile__meta">
+                    <p class="slds-truncate" title={account.Type}>{account.Type}</p>
+                </dd>
+                <dt class="slds-dl_horizontal__label">
+                    <p class="slds-truncate" title="Owner">Owner:</p>
+                </dt>
+                <dd class="slds-dl_horizontal__detail slds-tile__meta">
+                    <p class="slds-truncate" title={account.Owner.Name}>{account.Owner.Name}</p>
+                </dd>
+                <dt class="slds-dl_horizontal__label">
+                    <p class="slds-truncate" title="OwnerProfile">Owner Profile Picture:</p>
+                </dt>
+                <dd class="slds-dl_horizontal__detail slds-tile__meta">
+                    <p class="slds-truncate" title={account.Owner.SmallPhotoUrl}><img src={account.Owner.SmallPhotoUrl}></p>
+                </dd>
+            </dl> 
+        </lightning-card>
+    </template>
+</template>
