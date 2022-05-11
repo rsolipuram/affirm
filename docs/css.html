@@ -1,0 +1,102 @@
+<html>
+	<head>
+
+		<style type="text/css">
+			html *
+			{
+				font-size: 1em;
+				color: #fff;
+				font-family: Verdana;
+			}
+
+			#bodyWrapper
+			{
+				max-width: 1024px;
+				width:80%;
+    		margin:0 auto;
+			}
+
+			.btn
+			{
+				border-radius: 25px;
+				background: gray;
+				padding: 5px 5px 5px 5px;
+				display: block;
+				width: 75px;
+				text-align: center;
+			}
+
+			.btn:hover
+			{
+				background: rgb(66, 66, 66);
+				border: rgb(92, 43, 43);
+			}
+
+			.btn:active
+			{
+				background: rgb(77, 28, 28);
+				border: rgb(92, 43, 43);
+			}
+
+			.accountList > div
+			{
+				background: rgb(39, 77, 28);
+				margin: 20px 20px 20px 0;
+				padding: 5px 5px 5px 5px;
+				box-shadow: 0 3px 3px rgb(14, 10, 235);
+			}
+
+			.accountList > .alert
+			{
+				background: rgb(209, 17, 17);
+			}
+
+			.alert
+			{
+				background: rgb(209, 123, 17);
+				padding: 5px 5px 5px 5px;
+			}
+		</style>
+
+	</head>
+
+	<body>
+		<!-- Give the entire document some nicer font -->
+
+		<div id="bodyWrapper">
+			This div should align in the center of the page and never be wider than 1024px
+
+			<span class="btn">
+				Click me!
+				<!--
+				This should be grey with rounded corders
+				It should have some nice spacing between the text and the outside of the button
+				On mouse hover it should be slightly darker grey
+				When depressed or clicked it should be very dark grey but font should still be readable
+				For each state, the border should be a slightly darker color than the background
+				-->
+			</span>
+
+			<br/>
+			<br/>
+
+			<div class="accountList">
+				<!-- Default color of all these divs should be some shade of green, do not add any additional class names -->
+				<!-- Each div should also have a nice soft drop shadow and adequate spacing between each item to show this shadow -->
+				<div>Acme</div>
+				<div class="alert">Widgets Inc. <!--background should be red, do not change the class name from 'alert'--></div>
+				<div>Gears and Bearings</div>
+				<div>Computer City</div>
+			</div>
+
+			<br/>
+			<br/>
+
+			<div class="alert">
+				<!--background should be orange, do not change the class name from 'alert'-->
+				Uh oh, something broke
+			</div>
+
+		</div>
+	</body>
+</html>
